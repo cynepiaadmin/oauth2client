@@ -38,7 +38,6 @@ from oauth2client import _pkce
 from oauth2client import clientsecrets
 from oauth2client import transport
 
-
 HAS_OPENSSL = False
 HAS_CRYPTO = False
 try:
@@ -2027,7 +2026,7 @@ class OAuth2WebServerFlow(Flow):
         post_data = {
             'client_id': self.client_id,
             'code': code,
-            'scope': self.scope,
+            #'scope': self.scope,
         }
         if self.client_secret is not None:
             post_data['client_secret'] = self.client_secret
